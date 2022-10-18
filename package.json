@@ -1,0 +1,32 @@
+{
+  "name": "ca-tool-ogue2",
+  "version": "1.0.0",
+  "description": "A simple TOOL inventory app using IndexedDB",
+  "private": "true",
+  "scripts": {
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run build\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server node server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brian-nelson10/ca-tool-ogue2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brian-nelson10/ca-tool-ogue2/issues"
+  },
+  "homepage": "https://github.com/brian-nelson10/ca-tool-ogue2#readme",
+  "engines": {
+    "node": "^18.11.0"
+  },
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "idb": "^7.1.0",
+    "node": "^18.11.0"
+  }
+}
